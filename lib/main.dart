@@ -1,43 +1,58 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MisIconosApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class MisIconosApp extends StatelessWidget {
+  const MisIconosApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
-    );
-  }
-}
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text("Dulce Maria Tolentino De Anda"),
+            titleTextStyle: TextStyle(color: Color(0xffb94183), fontSize: 30),
+            centerTitle: true,
+            backgroundColor: Color(0xffffd4e3),
+          ),
+          body: Column(
+            children: <Widget>[
+              Text(
+                "Dulce Tolentino 1367",
+                style: TextStyle(fontSize: 30, color: Color(0xff060b52)),
+              ),
+              SizedBox(
+                height: 100,
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Icon(
+                    Icons.thumb_down,
+                    color: Color(0xffb1e7ff),
+                    size: 40,
+                    semanticLabel: 'Text to announce in accessibility modes',
+                  ),
+                  Icon(
+                    Icons.audiotrack,
+                    color: Color(0xff8922b9),
+                    size: 40.0,
+                  ),
+                  Icon(
+                    Icons.star,
+                    color: Color(0xfffff994),
+                    size: 40.0,
+                  ),
+                  Icon(
+                    Icons.add_location,
+                    color: Color(0xff1830ff),
+                    size: 40.0,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ));
+  } //mis widgets
+} //mi clase
